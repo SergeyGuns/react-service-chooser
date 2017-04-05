@@ -2,8 +2,8 @@
 
 ```bash
 #must by installed : nodeJS, Git
-git clone https://github.com/SergeyGuns/react-search.git
-cd react-search
+git clone https://github.com/SergeyGuns/react-service-chooser.git
+cd react-service-chooser
 npm i
 npm start
 ```
