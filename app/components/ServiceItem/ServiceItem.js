@@ -9,18 +9,23 @@ const DEFAULT = {
 }
 
 export default class ServiceItem extends React.Component {
-  constructor({obj = DEFAULT , handlerClick}) {
+  constructor({obj = DEFAULT , handlerClick , added}) {
     super()
-    this.state = {
-      obj : obj
-    }
     this.handlerClick = handlerClick
   }
 
+  isEqual(a, b) {
+    return JSON.stringify(a) == JSON.stringify(b)
+  }
+
   render () {
-    let {id, name, discription, price, added} = this.state.obj
+    let {id, name, discription, price, added} = this.props.obj
     return (
-      <div data-id={id} onClick={this.handlerClick.bind(this)} className='list'>
+      <div 
+        data-id={id} 
+        onClick={this.handlerClick.bind(this)} 
+        style={{'backgroundColor': added ? '#eee' : '#fff'}}
+        className='list'>
         <div className='id'>{id}</div>
         <div className='name'>{name}</div>
         <div className='discription'>{discription}</div>
