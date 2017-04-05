@@ -24,13 +24,15 @@ export default class ServiceItem extends React.Component {
       <div 
         data-id={id} 
         onClick={this.handlerClick.bind(this)} 
-        style={{'backgroundColor': added ? '#eee' : '#fff'}}
+        style={{
+          'backgroundColor': added ? '#dfd' : '#fff',
+          'border': 'solid 1px'
+          }}
         className='list'>
-        <div className='id'>{id}</div>
-        <div className='name'>{name}</div>
-        <div className='discription'>{discription}</div>
-        <div className='price'>{price}</div>
-        <div className='added'>{''+added}</div>
+        <div className='name'>Name:{name}</div>
+        <div className='discription'>Discription: {discription}</div>
+        <div className='price'>Price: {price}</div>
+        <div className='added'>Chosed: {''+added}</div>
       </div>
     )
   }
